@@ -1,0 +1,74 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block first_content %}
+<main class="main pb-4">
+  <section class="card text-bg-dark" id="bg-img-page">
+      <img src="{%static 'core/img/backgrounds/bg-overlay_2.png'%}" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h1 class="card-title">Servicios</h1>
+        <p class="card-text">Pain Family Studio ofrece servicios de perforaciones, controles y venta de joyería fina certificada.</p>
+        </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block second_content %}
+  <section class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 gy-3">
+      <div class="col">
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/bridge.jpg'%}"class="img-hover" alt="">
+        </div>
+      </div>
+      <div class="col "> 
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/conch.jpg'%}"class="img-hover" alt="">
+        </div>
+      </div>
+      <div class="col "> 
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/eyebrow.jpg'%}"class="img-hover" alt="">
+        </div>
+      </div>
+      <div class="col"> 
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/forward helix.jpg'%}" class="img-hover" alt="">
+        </div>
+      </div>
+      <div class="col "> 
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/nostril.jpg'%}" class="img-hover" alt="">
+        </div>
+      </div>
+      <div class="col "> 
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/helix.jpg'%} " class="img-hover" alt="">
+        </div>
+      </div>
+      <div class="col"> 
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/hight nostril.jpg'%}" class="img-hover" alt="">
+        </div>
+      </div>
+      <div class="col "> 
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/inverted labret.jpg'%}" class="img-hover" alt="">
+        </div>
+      </div>
+      <div class="col "> 
+        <div class="text-center">
+          <img src="{%static 'core/img/servicios/lobulo.jpg'%}" class="img-hover" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block js_ %}
+  <script src="{% static 'core/js/funciones.js' %}"></script>
+{% endblock %}
+
+

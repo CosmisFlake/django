@@ -1,0 +1,117 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block first_content %}
+<main class="main pb-4">
+  <section class="container-fluid px-0">
+    <div class="card text-bg-dark" id="bg-img-page">
+      <img src="{%static 'core/img/backgrounds/bg-overlay_1.png'%}" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <br>
+        <h1 class="card-title">Contáctanos</h1>
+        <p class="card-text">Ponte en contacto con nuestro equipo de expertos en bodypiercing para aclarar tus dudas.</p>
+        
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+
+  {% block second_content %}
+  <section class="container my-4"> <!-- form -->
+    <h1>Contáctanos</h1>
+    <div class="row row-cols-2 my-4">
+      <div class="col col-lg-5 mb-3 mx-auto">
+        <label for="txtNombre">Nombre</label>
+        <input type="text" class="form-control mb-3" id="txtNombre" placeholder="Ingrese nombre">
+        <small id="valNombre">Debe ingresar su nombre</small>
+      </div> 
+      <div class="col col-lg-5 mb-3 mx-auto">
+          
+        <label for="txtApellido">Apellido</label>
+        <input type="text" class="form-control mb-3" id="txtApellido" placeholder="Ingrese su apellido">    
+        <small id="valApellido">Debe ingresar su apellido</small>
+      </div>
+    </div>
+    <div class="row row-cols-2 my-4">
+      <div class="col col-lg-5 mb-3 mx-auto">
+        <label for="txtRut">Rut</label>
+        <input type="text" class="form-control mb-3" id="txtRut" placeholder="Ingrese su rut">
+        <small id="valRut">Debe ingresar su rut</small>
+      </div>
+      <div class="col col-lg-5 mb-3 mx-auto">
+        <label for="txtFecha" class="form-label mb-0">Fecha de nacimiento:</label>
+        <input type="date" class="form-control mb-3" id="txtFecha" name="fecha"> <!--revisar name-->
+      </div>
+    </div>
+    <div class="row row-cols-2 my-4">
+      <div class="col col-lg-5 mb-3 mx-auto">
+        <label for="txtDireccion">Direccion</label>
+        <input type="text" class="form-control mb-3" id="txtDireccion" placeholder="">
+        <small id="valDireccion">Debe ingresar su direccion</small>
+      </div>
+      <div class="col col-lg-5 mb-3 mx-auto"> 
+        <label for="cmbComuna">Comuna</label>
+        <select class="form-select mb-3" id="cmbComuna" aria-label="Default select example">
+          <option selected disabled value="null">Seleccione</option>
+          <option value="1">Santiago</option>
+          <option value="2">Providencia</option>
+          <option value="3">Ñuñoa</option>
+          <option value="4">Recoleta</option>
+          <option value="5">Estación central</option>
+          <option value="6">Recoleta</option>
+        </select>
+        <small id="valComuna">Debe seleccionar una comuna</small>
+      </div>
+    </div>
+    <div class="row row-cols-2 my-4">
+      <div class="col col-lg-5 mb-3 mx-auto">
+        <label for="txtCorreo">Correo</label>
+        <input type="email" class="form-control mb-3" id="txtCorreo" placeholder="Ingrese su correo">
+        <small id="valCorreo">Debe ingresar su correo</small>
+      </div>
+      <div class="col col-lg-5 mb-3 mx-auto">
+        <label for="txtContrasena">Contraseña</label>
+        <div class="input-group mb-3">
+          <input id="txtContrasena" type="password" class="form-control mb-0" placeholder="Password" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="button" id="btn-password">
+            <svg id="mostrar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+              <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+            </svg>
+            <svg id="ocultar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+              <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+              <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+            </svg>
+          </button>
+        </div>
+        <small id="valContrasena">Debe ingresar una contraseña</small>
+      </div>
+    </div>
+    <div class="row row-cols-1 ">
+      <div class="col col-lg-11 mx-auto mb-4">
+        <label for="exampleFormControlInput1" class="form-label">Asunto</label>
+        <input type="email" class="form-control" id="asunto" placeholder="Escribe aquí">
+      </div>
+
+      <div class="col col-lg-11 mx-auto my-4">
+        <label for="valComentario" class="form-label">Comentario</label>
+        <textarea class="form-control" id="valComentario" rows="3" placeholder="Escribe tu mensaje aquí"></textarea>
+        <p id="charNum"></p>
+      </div>
+    </div>
+
+    <div class=" m-3 col-12">
+      <button id="btn-submit" type="button" class="btn btn-primary mt-4">Enviar</button>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+
+
+{% block script %}
+  <script src="{% static 'core/js/funciones.js' %}"></script>
+{% endblock %}
+
+

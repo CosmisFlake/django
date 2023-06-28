@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block first_content %}
+<main class="main pb-4">
+  <section class="container-fluid px-0">
+    <div class="card text-bg-dark" id="bg-img-page">
+      <img src="{%static 'core/img/backgrounds/bg-overlay_3.png'%}" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <br>
+        <h1 class="card-title">Equipo de desarrollo web</h1>
+        </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block second_content %}
+  <section class="col-lg-5 col-lg my-lg-5 col-md-6 col my-md-5 mx-auto">
+    <br>
+    <div>
+      <h3>Acerca de nosotros</h3>
+      <p>Somos un equipo de programadores web dedicado a al desarrollo de plataformas web, aplicaciones moviles y softwares de alta calidad.</p>
+    </div>
+    <div>
+      <h3>Nuestro equipo</h3>
+      <ul>
+        <li>
+          <strong>Fernanda Valenzuela, </strong><em>Encargada de proyecto.</em>
+          <p>Es quién tiene como objetivo gestionar y aplicar metodologías de trabajo en cada uno de los proyectos.</p>
+        </li>
+        <li>
+          <strong>Gabriela Sepúlveda, </strong><em>Encargada de desarrollo web.</em>
+          <p>Es quién tiene como objetivo diseñar, programar y monitorear el sitio web.</p>
+        </li>
+        <li>
+          <strong>Joan Amaya, </strong><em>Analista programador.</em>
+          <p>Es el encargado de implementar, analizar y asegurar la continuidad de los sistemas implementados. </p>
+        </li>
+      </ul>
+      <br>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+
+
+{% block js_ %}
+  <script src="{% static 'core/js/funciones.js' %}"></script>
+{% endblock %}
+

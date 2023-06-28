@@ -1,0 +1,174 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block first_content %}
+<main class="main pb-4">
+    <section class="container-fluid px-0"> <!-- Carrousel -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{%static 'core/img/backgrounds/bg-carrousel_3.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'core/img/backgrounds/bg-carrousel_2.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'core/img/backgrounds/bg-carrousel_1.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'core/img/backgrounds/bg-carrousel_4.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'core/img/backgrounds/bg-carrousel_5.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'core/img/backgrounds/bg-carrousel_6.jpg'%}" class="d-block w-100" alt="...">
+          </div>
+        </div> 
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+{% endblock %}
+
+{% block second_content %}
+    <section class="container" id="contenidos"> <!-- Contenidos -->
+      <div class="row">
+        <div class="col-lg-3 col-md my-2 mx-auto">
+          <div class="card mx-auto">
+            <img src="{%static 'core/img/backgrounds/joyeria.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Catálogo</h5>
+              <p class="card-text">Conoce en detalle los materiales y marcas con los que trabajamos.</p>
+              <a href="{% url 'catalogo' %}" class="btn btn-primary">Ver</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md my-2 mx-auto">
+          <div class="card mx-auto">
+            <img src="{%static 'core/img/backgrounds/nosotros.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Perforaciones</h5>
+              <p class="card-text">Conoce las diferentes perforaciones que realizamos.</p>
+              <a href="{% url 'servicios' %}" class="btn btn-primary">Ver</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md my-2 mx-auto">
+          <div class="card mx-auto">
+            <img src="{%static 'core/img/backgrounds/servicio.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Contacto</h5>
+              <p class="card-text">Ponte en contacto con nuestro equipo para aclarar tus dudas</p>
+              <a href="{% url 'contacto' %}" class="btn btn-primary">Ver</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md my-2 mx-auto">
+          <div class="card mx-auto">
+            <img src="{%static 'core/img/backgrounds/contacto.jpg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Equipo</h5>
+              <p class="card-text">Conoce nuestro equipo de trabajo y sus funciones.</p>
+              <a href="{% url 'nosotros' %}" class="btn btn-primary">Ver</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container" id="reels">
+      <div class="row">
+        <div class="col-md-8 col-lg-4 mx-auto">
+          <video src="{%static 'core/video/reel.mp4'%}" class="ratio ratio-9X16 py-2" controls autoplay muted loop ></video>
+        </div>
+        <div class="col-md-8 col-lg-4 mx-auto">
+          <video src="{%static 'core/video/reel_1.mp4'%}" class="ratio ratio-9X16 py-2" controls autoplay muted loop ></video>
+        </div>
+        <div class="col-md-8 col-lg-4 mx-auto">
+          <video src="{%static 'core/video/reel_2.mp4'%}" class="ratio ratio-9X16 py-2" controls autoplay muted loop ></video>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="container-fluid text-center mt-4">
+        <h3 class="">Recomendación de Rick and Morty</h3>
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card mb-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div id="img-1" class="col-md-4"></div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 id="card-title-1" class="card-title"></h5>
+                      <p id="card-text-1" class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card mb-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div id="img-2" class="col-md-4"></div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 id="card-title-2" class="card-title"></h5>
+                      <p id="card-text-2" class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card mb-3 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div id="img-3" class="col-md-4"></div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 id="card-title-3" class="card-title"></h5>
+                      <p id="card-text-3" class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon carousel-api-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon carousel-api-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
+    </section>
+
+  </main>
+{% endblock %}
+
+
+
+{% block js_ %}
+  <script src="{% static 'core/js/funciones.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Catalogo{% endblock %}
+
+{% block item_nav %}
+<li class="nav-item">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Marcas
+    </a>
+    <ul class="dropdown-menu">
+        {% for m in marcas %}
+        <li><a class="dropdown-item" href="/joyeria/marca/{{m.id}}">{{m.marca}}</a></li>
+        {% endfor %}
+    </ul>
+</li>
+{% endblock %}
+
+{% block first_content %}
+<main class="main pb-4">
+  <section class="card text-bg-dark" id="bg-img-page">
+    <img src="{% static 'core/img/backgrounds/bg-overlay_4.png'%}" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <br>
+      <h1 class="card-title">Catálogo</h1>
+      <p class="card-text">En Pain Family Studio puedes encontrar joyería de titanio certificado (ASTM-F136) y de oro sólido con gemas preciosas.</p>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block body %}
+<section class="container mt-4">    
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 gy-3">
+        {% for j in joyerias %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+            {% if j.image %}
+            <img src="{{j.image.url}}" class="card-img-top" alt="{{j.name}}">
+            {% else %}
+            <img src="{% static 'crud/img/image_not_found.jpg' %}" class="card-img-top" alt="Image not found">
+            {% endif  %}
+            <div class="card-body">
+                    <p class="card-text fst-italic">
+                        <a class="text-decoration-none" href="/joyeria/marca/{{j.marca.id}}">{{j.marca}}</a>
+                    </p>
+                    <p class="card-text text-muted">ID: {{j.idJoyeria}}</p>
+                    <p class="card-title fw-bold">{{j.name}}</p>
+                    <p class="card-text">Tipo de joya: {{j.tipo}}</p>
+                    <p class="card-text">Valor: ${{j.value }}</p>
+                    <p class="card-text">Stock: {{j.stock}}</p>
+            </div>
+            </div>
+                <div class="card-footer text-center">
+                    <a class="btn btn-primary" href="#">
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </a>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
